@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>Catálogos Web para Shopify | Diseño E-Commerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Galería de fondo dinámica -->
+    <div class="BackgroundGallery" id="bgGallery">
+      <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1920&q=80')"></div>
+      <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&q=80')"></div>
+    </div>
+    <div class="Overlay-purple"></div>
+
+    <!-- Menú Superior -->
+    <div class="Menu">
+      <nav>
+        <a href="#" data-view="mainView" class="nav-tab selected">Inicio & Catálogo</a>
+        <a href="#" data-view="infoView" class="nav-tab">Información</a>
+        <div class="UserNavArea">
+          <!-- Punto discreto de acceso para el dueño -->
+          <a href="#" id="openAdminLogin" class="AdminSecretLink" title="Acceso Propietario">•</a>
+          <a href="#" id="openAdminModal" class="AdminNavBtn hidden">⚙️ Panel Admin</a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- VISTA 1: INICIO Y CATÁLOGO -->
+    <div id="mainView" class="ViewContainer">
+      <div class="Container">
+        <!-- INICIO -->
+        <div id="inicio" class="Section">
+          <div class="Home-content">
+            <div class="gg">
+              <div class="gg-symbol gg-symbol--rect gg-symbol--5 gg-symbol--gradient"></div>
+              <div class="gg-symbol gg-symbol--rect gg-symbol--3"></div>
+              <div class="gg-symbol gg-symbol--disc"></div>
+            </div>
+            <div class="Title">
+              <h1>Hacemos tu catálogo web</h1>
+              <h2>para Shopify</h2>
+              <p class="Hero-desc">Explora nuestros diseños y videos de muestra. Regístrate únicamente cuando elijas tu modelo y solicites el servicio.</p>
+            </div>
+            <div class="Arrow" data-target="#catalogos">↓</div>
+          </div>
+        </div>
+
+        <!-- CATÁLOGOS Y VIDEOS DE TRABAJO -->
+        <div id="catalogos" class="Section">
+          <div class="Work-content">
+            <h3><span class="gg-symbol--gradient title-bar"></span>Nuestro Catálogo de Diseños</h3>
+            <p class="Section-subtitle">Elige el modelo que mejor se adapte a tu marca para solicitarlo:</p>
+            
+            <div class="Catalog-grid">
+              <div class="CatalogCard">
+                <div class="CatalogCard-img" style="background-image: url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=800&q=80')">
+                  <span class="Catalog-tag">Moda & Ropa</span>
+                </div>
+                <div class="CatalogCard-info">
+                  <h4>Minimal Fashion</h4>
+                  <p>Filtros por talla, color y carrito deslizable.</p>
+                  <button class="RequestServiceBtn" data-plan="Minimal Fashion">Solicitar Servicio</button>
+                </div>
+              </div>
+
+              <div class="CatalogCard">
+                <div class="CatalogCard-img" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80')">
+                  <span class="Catalog-tag">Tecnología</span>
+                </div>
+                <div class="CatalogCard-info">
+                  <h4>Tech & Gadgets</h4>
+                  <p>Comparador técnico y diseño moderno.</p>
+                  <button class="RequestServiceBtn" data-plan="Tech & Gadgets">Solicitar Servicio</button>
+                </div>
+              </div>
+
+              <div class="CatalogCard">
+                <div class="CatalogCard-img" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80')">
+                  <span class="Catalog-tag">Belleza & Skincare</span>
+                </div>
+                <div class="CatalogCard-info">
+                  <h4>Cosmética Natural</h4>
+                  <p>Kits de productos, suscripciones y reseñas.</p>
+                  <button class="RequestServiceBtn" data-plan="Cosmética Natural">Solicitar Servicio</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECCIÓN DE VIDEOS -->
+            <div class="VideosSection">
+              <h3><span class="gg-symbol--gradient title-bar"></span>Videos de Nuestros Trabajos</h3>
+              <p class="Section-subtitle">Mira nuestras tiendas Shopify en funcionamiento:</p>
+              <div id="videosGrid" class="Videos-grid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VISTA 2: INFORMACIÓN -->
+    <div id="infoView" class="ViewContainer hidden">
+      <div class="Container">
+        <div class="Section InfoStandalone">
+          <div class="About-content">
+            <button class="BackBtn" data-view="mainView">← Volver al Catálogo</button>
+            <h3><span class="gg-symbol--gradient title-bar"></span>Información y Contacto</h3>
+            <p class="Section-subtitle">Conoce cómo trabajamos y contáctanos directamente:</p>
+
+            <div class="InfoCardsGrid">
+              <div class="InfoFeatureCard">
+                <h4>⚡ Entrega Rápida</h4>
+                <p>Configuramos tu catálogo completo en Shopify listo para recibir pagos y pedidos.</p>
+              </div>
+              <div class="InfoFeatureCard">
+                <h4>📱 100% Adaptable</h4>
+                <p>Diseño optimizado para ventas desde dispositivos móviles y computadoras.</p>
+              </div>
+            </div>
+            
+            <div class="ContactBox">
+              <button id="btnRevealContact" class="Contact-btn">Mostrar Contacto Directo</button>
+              <div id="contactDetails" class="Contact-details hidden">
+                <p>📧 <strong>Correo:</strong> <a id="displayContactEmail" href="mailto:sebastian178requena@gmail.com">sebastian178requena@gmail.com</a></p>
+                <p>📱 <strong>Teléfono / WhatsApp:</strong> <a id="displayContactPhone" href="https://wa.me/58000000000" target="_blank">+58 400 000 0000</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Footer">
+      <ul>
+        <li><span>© 2026 Catálogos Shopify</span></li>
+        <li><span id="footerVisitCount">Visitas: 0</span></li>
+      </ul>
+    </div>
+
+    <!-- MODAL DE REGISTRO AL SOLICITAR SERVICIO -->
+    <div id="serviceModal" class="AdminModal hidden">
+      <div class="AdminContent">
+        <h3>Solicitar Catálogo</h3>
+        <p class="Admin-sub">Diseño elegido: <strong id="selectedPlanName" style="color:#d8b4fe;">General</strong></p>
+        <p class="Admin-sub" style="margin-bottom: 1rem;">Completa tus datos para procesar tu solicitud:</p>
+        
+        <form id="serviceRequestForm" class="AuthForm">
+          <input type="text" id="clientName" placeholder="Tu Nombre o Marca" required class="AdminInput">
+          <input type="email" id="clientEmail" placeholder="Tu Correo Electrónico" required class="AdminInput">
+          <input type="tel" id="clientPhone" placeholder="Tu WhatsApp / Teléfono" required class="AdminInput">
+          <div class="AdminButtons">
+            <button type="submit" class="AdminBtnSave" style="flex:1;">Confirmar Solicitud</button>
+            <button type="button" id="closeServiceModal" class="AdminBtnClose">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODAL DE ACCESO PROPIETARIO -->
+    <div id="ownerLoginModal" class="AdminModal hidden">
+      <div class="AdminContent">
+        <h3>Acceso Propietario</h3>
+        <p class="Admin-sub">Ingresa la contraseña de administrador:</p>
+        <form id="ownerAuthForm" class="AuthForm">
+          <input type="password" id="ownerPassInput" placeholder="Contraseña secreta" required class="AdminInput">
+          <div class="AdminButtons">
+            <button type="submit" class="AdminBtnSave" style="flex:1;">Entrar</button>
+            <button type="button" id="closeOwnerLogin" class="AdminBtnClose">Cerrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- MODAL PANEL DE ADMINISTRACIÓN -->
+    <div id="adminModal" class="AdminModal hidden">
+      <div class="AdminContent AdminLarge">
+        <div class="AdminHeader">
+          <h3>Panel de Administración</h3>
+          <button id="closeAdminModal" class="AdminBtnClose">✕</button>
+        </div>
+
+        <div class="AdminStatsRow">
+          <span>Visitas totales: <strong id="visitCount">0</strong></span>
+          <span>Solicitudes: <strong id="totalRequestsCount">0</strong></span>
+        </div>
+
+        <!-- 1. Cambiar Imagen de Fondo -->
+        <div class="AdminSectionBox">
+          <h4>1. Cambiar Imagen de Fondo</h4>
+          <div class="AdminInlineForm">
+            <input type="text" id="imgUrlInput" class="AdminInput" placeholder="Pega la URL de la nueva imagen">
+            <button id="saveBgBtn" class="AdminBtnSave">Actualizar</button>
+          </div>
+        </div>
+
+        <!-- 2. Cambiar Datos de Contacto -->
+        <div class="AdminSectionBox">
+          <h4>2. Editar Información de Contacto</h4>
+          <input type="email" id="adminEmailInput" class="AdminInput" placeholder="Nuevo correo de contacto">
+          <div class="AdminInlineForm">
+            <input type="text" id="adminPhoneInput" class="AdminInput" placeholder="Nuevo teléfono / WhatsApp">
+            <button id="saveContactBtn" class="AdminBtnSave">Guardar</button>
+          </div>
+        </div>
+
+        <!-- 3. Agregar Videos -->
+        <div class="AdminSectionBox">
+          <h4>3. Agregar Video de Nuestro Trabajo</h4>
+          <input type="text" id="videoTitleInput" class="AdminInput" placeholder="Título del proyecto">
+          <div class="AdminInlineForm">
+            <input type="text" id="videoUrlInput" class="AdminInput" placeholder="Enlace de YouTube o video (.mp4)">
+            <button id="addVideoBtn" class="AdminBtnSave">Subir</button>
+          </div>
+          <ul id="adminVideosList" class="EmailsList" style="margin-top:8px;"></ul>
+        </div>
+
+        <!-- 4. Lista de Solicitudes -->
+        <div class="AdminUserListBox">
+          <h4>4. Clientes que solicitaron servicio:</h4>
+          <ul id="registeredRequestsList" class="EmailsList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pantalla de Bienvenida -->
+    <div class="Loader">
+      <div class="Welcome-box">
+        <span class="Welcome-text">Bienvenido</span>
+        <div class="Loader-bar"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

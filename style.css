@@ -1,0 +1,165 @@
+:root {
+  --bg-top: #0F061D;
+  --bg-mid: #241042;
+  --bg-bottom: #47217A;
+  --text-color: #FFFFFF;
+  --muted-color: #C4B5FD;
+  --accent-grad: linear-gradient(90deg, #A855F7 0%, #EC4899 100%);
+  --solid-shape: rgba(168, 85, 247, 0.25);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 50%, var(--bg-bottom) 100%);
+  background-attachment: fixed;
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.BackgroundGallery { position: fixed; inset: 0; z-index: -2; overflow: hidden; }
+.bg-slide {
+  position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transform: scale(1);
+  transition: opacity 2s ease-in-out, transform 10s linear;
+}
+.bg-slide.active { opacity: 0.55; transform: scale(1.08); }
+
+.Overlay-purple {
+  position: fixed; inset: 0;
+  background: linear-gradient(180deg, rgba(15, 6, 29, 0.55) 0%, rgba(36, 16, 66, 0.68) 55%, rgba(71, 33, 122, 0.78) 100%);
+  z-index: -1;
+}
+
+.Loader { position: fixed; inset: 0; background: #0F061D; z-index: 2000; display: flex; align-items: center; justify-content: center; }
+.Welcome-box { text-align: center; }
+.Welcome-text {
+  display: block; font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 700; letter-spacing: 3px;
+  background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.Loader-bar { height: 4px; width: 100%; margin-top: 12px; border-radius: 2px; background: var(--accent-grad); transform-origin: left center; }
+
+.Menu { position: fixed; top: 2rem; right: 3rem; z-index: 50; }
+.Menu nav { display: flex; align-items: center; gap: 2rem; }
+.Menu a { color: var(--muted-color); text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease; }
+.Menu a:hover, .Menu a.selected { color: var(--text-color); }
+
+.UserNavArea { display: flex; align-items: center; gap: 10px; }
+.AdminSecretLink { opacity: 0.25; font-size: 1.3rem !important; transition: opacity 0.3s; }
+.AdminSecretLink:hover { opacity: 1; }
+.AdminNavBtn {
+  background: rgba(168, 85, 247, 0.25); border: 1px solid rgba(168, 85, 247, 0.5);
+  color: #E9D5FF !important; padding: 5px 12px; border-radius: 6px; font-size: 0.78rem !important;
+}
+
+.Container { max-width: 1040px; margin: 0 auto; padding: 0 2rem; }
+.Section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 6rem 0; }
+.InfoStandalone { justify-content: flex-start; padding-top: 8rem; }
+
+.BackBtn {
+  background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(196, 181, 253, 0.3); color: #FFFFFF;
+  padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-size: 0.85rem; margin-bottom: 1.8rem;
+}
+.BackBtn:hover { background: rgba(168, 85, 247, 0.3); }
+
+.InfoCardsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; margin-bottom: 2rem; }
+.InfoFeatureCard { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(196, 181, 253, 0.15); padding: 1.4rem; border-radius: 10px; }
+.InfoFeatureCard h4 { margin-bottom: 0.5rem; color: #E9D5FF; }
+.InfoFeatureCard p { font-size: 0.9rem; color: var(--muted-color); }
+
+.gg { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.gg-symbol { height: 14px; border-radius: 7px; background-color: var(--solid-shape); display: inline-block; }
+.gg-symbol--gradient { background: var(--accent-grad); }
+.gg-symbol--disc { width: 14px; border-radius: 50%; }
+.gg-symbol--rect.gg-symbol--3 { width: 54px; }
+.gg-symbol--rect.gg-symbol--5 { width: 98px; }
+
+.Title { margin: 2.2rem 0; }
+.Title h1 { font-size: clamp(2.3rem, 5.5vw, 4rem); font-weight: 700; text-shadow: 0 4px 20px rgba(10, 4, 20, 0.9); }
+.Title h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 700; background: var(--accent-grad);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.Hero-desc { margin-top: 1.2rem; max-width: 580px; color: #EDE9FE; text-shadow: 0 2px 12px rgba(10, 4, 20, 0.95); }
+
+h3 { font-size: 1.6rem; margin-bottom: 0.8rem; display: flex; align-items: center; gap: 12px; }
+.title-bar { width: 32px; height: 6px; border-radius: 3px; display: inline-block; }
+.Section-subtitle { color: var(--muted-color); margin-bottom: 2rem; }
+
+.Catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+.CatalogCard {
+  background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(196, 181, 253, 0.15);
+  border-radius: 12px; overflow: hidden; backdrop-filter: blur(6px); transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.CatalogCard:hover { transform: translateY(-6px); border-color: #A855F7; }
+.CatalogCard-img { height: 165px; background-size: cover; background-position: center; padding: 12px; }
+.Catalog-tag { background: rgba(15, 6, 29, 0.85); color: #E9D5FF; font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 20px; }
+.CatalogCard-info { padding: 1.3rem; }
+.CatalogCard-info h4 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.CatalogCard-info p { font-size: 0.88rem; color: var(--muted-color); margin-bottom: 1.2rem; }
+
+.RequestServiceBtn {
+  width: 100%; background: var(--accent-grad); border: none; color: #FFFFFF;
+  padding: 0.7rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.88rem; cursor: pointer;
+}
+
+.VideosSection { margin-top: 4.5rem; }
+.Videos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.VideoCard { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(196, 181, 253, 0.18); border-radius: 12px; overflow: hidden; }
+.VideoCard iframe, .VideoCard video { width: 100%; height: 200px; border: none; display: block; background: #000; }
+.VideoCard-title { padding: 0.9rem 1.1rem; font-size: 0.95rem; font-weight: 600; }
+
+.ContactBox { margin-top: 1rem; }
+.Contact-btn { background: var(--accent-grad); border: none; color: #FFF; padding: 0.8rem 1.5rem; font-weight: 600; border-radius: 6px; cursor: pointer; }
+.Contact-details {
+  margin-top: 1.2rem; background: rgba(255, 255, 255, 0.05); padding: 1.2rem; border-radius: 8px; border: 1px solid rgba(196, 181, 253, 0.2);
+}
+.Contact-details p { margin-bottom: 0.5rem; }
+.Contact-details a { color: #E879F9; text-decoration: none; font-weight: 600; }
+
+.hidden { display: none !important; }
+
+.AdminModal {
+  position: fixed; inset: 0; background: rgba(10, 4, 20, 0.88); z-index: 1000;
+  display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px);
+}
+.AdminContent {
+  background: #1B0D33; border: 1px solid rgba(168, 85, 247, 0.35); padding: 1.8rem;
+  border-radius: 12px; width: 92%; max-width: 440px; max-height: 90vh; overflow-y: auto;
+}
+.AdminLarge { max-width: 540px; }
+.AdminHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.AdminStatsRow {
+  display: flex; justify-content: space-between; background: #100621; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.9rem; margin-bottom: 1rem;
+}
+.AdminSectionBox { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.AdminSectionBox h4 { font-size: 0.9rem; color: #E9D5FF; margin-bottom: 0.6rem; }
+.AdminInlineForm { display: flex; gap: 8px; }
+.AdminInlineForm .AdminInput { margin-bottom: 0; }
+.Admin-sub { font-size: 0.85rem; color: var(--muted-color); margin-bottom: 0.5rem; }
+.AuthForm { display: flex; flex-direction: column; gap: 10px; }
+.AdminInput {
+  width: 100%; padding: 0.7rem; background: #100621; border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #FFF; border-radius: 6px; margin-bottom: 0.6rem;
+}
+.AdminButtons { display: flex; gap: 10px; margin-top: 0.5rem; }
+.AdminBtnSave { background: var(--accent-grad); border: none; color: #FFF; padding: 0.65rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; white-space: nowrap; }
+.AdminBtnClose { background: rgba(255,255,255,0.1); border: none; color: #FFF; padding: 0.5rem 0.9rem; border-radius: 6px; cursor: pointer; }
+
+.AdminUserListBox { background: #100621; padding: 0.8rem; border-radius: 6px; max-height: 140px; overflow-y: auto; }
+.AdminUserListBox h4 { font-size: 0.85rem; color: var(--muted-color); margin-bottom: 0.5rem; }
+.EmailsList { list-style: none; font-size: 0.8rem; color: #FFF; }
+.EmailsList li {
+  padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center;
+}
+.DeleteMiniBtn { background: #EF4444; border: none; color: #fff; padding: 2px 7px; border-radius: 4px; font-size: 0.7rem; cursor: pointer; }
+
+.Arrow {
+  margin-top: 2.5rem; width: 44px; height: 44px; border: 1px solid rgba(196, 181, 253, 0.3); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease;
+}
+.Arrow:hover { background: var(--accent-grad); border-color: transparent; }
+
+.Footer { padding: 2.5rem 2rem; border-top: 1px solid rgba(196, 181, 253, 0.15); max-width: 1040px; margin: 0 auto; }
+.Footer ul { list-style: none; display: flex; justify-content: space-between; color: var(--muted-color); font-size: 0.9rem; }
